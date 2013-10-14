@@ -105,5 +105,20 @@ module.exports = {
      */
     beep: function(count) {
         exec(null, null, "Notification", "beep", [count]);
-    }
+    },
+
+    /**
+     * Show an activity dialog
+     */
+    activityStart : function(title) {
+        var _title = (title || "");
+        exec(null, null, 'Notification', 'activityStart', [ _title ]);
+    },
+
+    /**
+     * Close an activity dialog
+     */
+    activityStop : function() {
+        exec(null, null, 'Notification', 'activityStop', []);
+    },
 };

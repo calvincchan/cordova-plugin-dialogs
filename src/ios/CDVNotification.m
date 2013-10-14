@@ -144,6 +144,15 @@ static void soundCompletionCallback(SystemSoundID  ssid, void* data) {
     playBeep([count intValue]);
 }
 
+- (void)activityStart:(CDVInvokedUrlCommand*)command {
+    NSString* message = [command argumentAtIndex:0];
+    UIWindow* top_window = [[UIApplication sharedApplication] keyWindow];
+    [DejalBezelActivityView activityViewForView:top_window withLabel:message];
+}
+
+- (void)activityStop:(CDVInvokedUrlCommand*)command {
+    [DejalBezelActivityView removeViewAnimated:YES];
+}
 
 @end
 

@@ -38,8 +38,10 @@
             </feature>
         </config-file>
         <header-file src="src/ios/CDVNotification.h" />
-	    <source-file src="src/ios/CDVNotification.m" />
-	    <resource-file src="src/ios/CDVNotification.bundle" />
+	      <source-file src="src/ios/CDVNotification.m" />
+        <header-file src="src/ios/DejalActivityView.h" />
+	      <source-file src="src/ios/DejalActivityView.m" />
+	      <resource-file src="src/ios/CDVNotification.bundle" />
 		<framework src="AudioToolbox.framework" weak="true" />
     </platform>
 

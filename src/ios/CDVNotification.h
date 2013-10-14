@@ -21,6 +21,7 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioServices.h>
 #import <Cordova/CDVPlugin.h>
+#import "DejalActivityView.h"
 
 @interface CDVNotification : CDVPlugin <UIAlertViewDelegate>{}
 
@@ -28,6 +29,8 @@
 - (void)confirm:(CDVInvokedUrlCommand*)command;
 - (void)prompt:(CDVInvokedUrlCommand*)command;
 - (void)beep:(CDVInvokedUrlCommand*)command;
+- (void)activityStart:(CDVInvokedUrlCommand*)command;
+- (void)activityStop:(CDVInvokedUrlCommand*)command;
 
 @end
 
